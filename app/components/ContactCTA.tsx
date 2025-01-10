@@ -55,24 +55,38 @@ export default function ContactCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Card className="bg-white">
-              <CardHeader>
+            <Card className="bg-white shadow-sm rounded-xl">
+              <CardHeader className="pb-4">
                 <CardTitle className="text-2xl font-bold text-gray-900">Contact Us</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-gray-700">Name</Label>
-                    <Input id="name" placeholder="Your name" className="text-gray-900" required />
+                    <Label htmlFor="name" className="text-gray-900">Name</Label>
+                    <Input 
+                      id="name" 
+                      placeholder="Your name" 
+                      className="border-gray-200 focus:border-gray-300 focus:ring-gray-200 rounded-lg text-gray-900 placeholder:text-gray-500" 
+                      required 
+                    />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-gray-700">Email</Label>
-                    <Input id="email" type="email" placeholder="Your email" className="text-gray-900" required />
+                    <Label htmlFor="email" className="text-gray-900">Email</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="Your email" 
+                      className="border-gray-200 focus:border-gray-300 focus:ring-gray-200 rounded-lg text-gray-900 placeholder:text-gray-500" 
+                      required 
+                    />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="reason" className="text-gray-700">Reason for Inquiry</Label>
+                    <Label htmlFor="reason" className="text-gray-900">Reason for Inquiry</Label>
                     <Select>
-                      <SelectTrigger id="reason" className="text-gray-900">
+                      <SelectTrigger 
+                        id="reason"
+                        className="border-gray-200 focus:border-gray-300 focus:ring-gray-200 rounded-lg text-gray-900 placeholder:text-gray-500"
+                      >
                         <SelectValue placeholder="Select a reason" />
                       </SelectTrigger>
                       <SelectContent>
@@ -84,17 +98,17 @@ export default function ContactCTA() {
                     </Select>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message" className="text-gray-700">Message</Label>
+                    <Label htmlFor="message" className="text-gray-900">Message</Label>
                     <Textarea 
                       id="message" 
                       placeholder="Your message" 
+                      className="min-h-[100px] border-gray-200 focus:border-gray-300 focus:ring-gray-200 rounded-lg text-gray-900 placeholder:text-gray-500" 
                       required 
-                      className="min-h-[100px] text-gray-900"
                     />
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                    className="w-full bg-gray-900 hover:bg-gray-800 text-white rounded-lg"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -110,27 +124,27 @@ export default function ContactCTA() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="space-y-8"
           >
-            <Card className="bg-white">
-              <CardHeader>
+            <Card className="bg-white shadow-sm rounded-xl">
+              <CardHeader className="pb-4">
                 <CardTitle className="text-2xl font-bold text-gray-900">Stay Updated</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleNewsletterSignup} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="newsletter-email" className="text-gray-700">Email</Label>
+                    <Label htmlFor="newsletter-email" className="text-gray-900">Email</Label>
                     <Input 
                       id="newsletter-email" 
                       type="email" 
                       placeholder="Your email" 
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="text-gray-900"
+                      className="border-gray-200 focus:border-gray-300 focus:ring-gray-200 rounded-lg text-gray-900 placeholder:text-gray-500"
                       required 
                     />
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                    className="w-full bg-gray-900 hover:bg-gray-800 text-white rounded-lg"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Signing up...' : 'Sign Up for Newsletter'}
@@ -139,28 +153,28 @@ export default function ContactCTA() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white">
-              <CardHeader>
+            <Card className="bg-white shadow-sm rounded-xl">
+              <CardHeader className="pb-4">
                 <CardTitle className="text-2xl font-bold text-gray-900">Connect With Us</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex justify-center space-x-4">
-                  <Button variant="outline" size="icon" asChild>
+                  <Button variant="outline" size="icon" asChild className="border-gray-200 hover:bg-gray-50 rounded-lg">
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                       <Twitter className="h-4 w-4 text-gray-700" />
                     </a>
                   </Button>
-                  <Button variant="outline" size="icon" asChild>
+                  <Button variant="outline" size="icon" asChild className="border-gray-200 hover:bg-gray-50 rounded-lg">
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                       <Linkedin className="h-4 w-4 text-gray-700" />
                     </a>
                   </Button>
-                  <Button variant="outline" size="icon" asChild>
+                  <Button variant="outline" size="icon" asChild className="border-gray-200 hover:bg-gray-50 rounded-lg">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                       <Facebook className="h-4 w-4 text-gray-700" />
                     </a>
                   </Button>
-                  <Button variant="outline" size="icon" asChild>
+                  <Button variant="outline" size="icon" asChild className="border-gray-200 hover:bg-gray-50 rounded-lg">
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                       <Instagram className="h-4 w-4 text-gray-700" />
                     </a>
