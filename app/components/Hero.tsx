@@ -34,7 +34,7 @@ export default function Hero() {
         muted
         className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
       >
-        <source src="/hero-background.mp4" type="video/mp4" />
+        <source src="https://assets.mixkit.co/videos/32982/32982-720.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
